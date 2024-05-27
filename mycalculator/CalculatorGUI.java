@@ -105,6 +105,7 @@ public class CalculatorGUI extends Implementation implements ActionListener {
 
         JMenu optionMenu = new JMenu("Option");
         ButtonGroup group = new ButtonGroup();
+        DECLayout();
         JRadioButtonMenuItem[] items = {new JRadioButtonMenuItem("DEC", true),
                                            new JRadioButtonMenuItem("BIN", false),
                                            new JRadioButtonMenuItem("OCT", false),
