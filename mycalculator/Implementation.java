@@ -100,8 +100,13 @@ public class Implementation extends Component {
         curOperator = "=";
     }
     public void doClearEntry() {
-        Jbt[3].setText("C");
-        outputText.setText("0");
+        if(!afterEqualsFlag) {
+            Jbt[3].setText("C");
+            outputText.setText("0");
+        } else {
+            Jbt[3].setText("C");
+            doClear();
+        }
     }
     public void doNumber(String str) {
         Jbt[3].setText("CE");
