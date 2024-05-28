@@ -10,7 +10,10 @@ public class Implementation extends Component {
     public static JFrame frame = new JFrame();
     // create menu items
     public static JMenuItem aboutItem;
-    public static JRadioButtonMenuItem DECItem, HEXItem, OCTItem, BINItem;
+    public static JRadioButtonMenuItem[] items = {new JRadioButtonMenuItem("DEC", true),
+                                           new JRadioButtonMenuItem("BIN", false),
+                                           new JRadioButtonMenuItem("OCT", false),
+                                           new JRadioButtonMenuItem("HEX", false)};
     //programmer calculator panel
     public static final String[] PROGRAMMER_KEYS = {
             "A", "<<", ">>", "C", "Del",
@@ -63,12 +66,13 @@ public class Implementation extends Component {
         }
     }
     public void showAboutDialog() {
-        String message = "版权归来自班级为计算机224\n" +
-                "学号为3220421136\n" +
-                "名叫范凯炫的个人所有！";
-        String title = "Message Dialogue";
+        JLabel aboutDialog = new JLabel("<html>版权归来自班级为<b>计算机224</b><br>" +
+                "学号为3220421136<br>" +
+                "名叫<b>范凯炫</b>的个人所有！<html>");
+        aboutDialog.setFont(new Font("Arial", Font.PLAIN, 18));
+        String title = "About";
         int type = JOptionPane.INFORMATION_MESSAGE;
-        JOptionPane.showMessageDialog(this, message, title, type);
+        JOptionPane.showMessageDialog(this, aboutDialog, title, type);
     }
     public void doDelete() {
         if(!afterEqualsFlag) {
