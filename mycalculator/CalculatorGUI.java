@@ -102,9 +102,11 @@ public class CalculatorGUI extends Implementation implements ActionListener {
         JMenuBar menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
         JMenu editMenu = new JMenu("Selection");
+        editMenu.setMnemonic('S');
         menuBar.add(editMenu);
 
         JMenu optionMenu = new JMenu("Option");
+        optionMenu.setMnemonic('O');
         ButtonGroup group = new ButtonGroup();
         DECLayout();
         
